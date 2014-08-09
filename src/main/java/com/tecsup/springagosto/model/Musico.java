@@ -12,6 +12,10 @@ public class Musico extends Persona {
 
     public Musico() {
     }
+
+    public Musico(Instrumento instrumento) {
+        this.instrumento = instrumento;
+    }
     
     private Instrumento instrumento;
     private List<Instrumento> instrumentos;

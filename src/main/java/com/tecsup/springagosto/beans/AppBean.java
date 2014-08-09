@@ -22,7 +22,8 @@ public class AppBean {
         //AppBean.referenciaConstructor(context);
         //AppBean.valoresMetodos(context);
         //AppBean.referenciaListado(context);
-        AppBean.autoWireByName(context);
+        //AppBean.autoWireByName(context);
+        AppBean.autoWire(context);
     }
 
     public static void valoresMetodos(ApplicationContext context){
@@ -52,4 +53,14 @@ public class AppBean {
         Musico musico =(Musico) context.getBean("noel");
         System.out.println(musico.getInstrumento().getMarca());
     }
+    
+    public static void autoWire(ApplicationContext context){
+        Musico musico =(Musico) context.getBean("noel");
+        System.out.println(musico.getInstrumento().getMarca());
+        Musico cerati = (Musico) context.getBean("cerati");
+        System.out.println(cerati.getInstrumento().getMarca());
+        Musico charly = (Musico) context.getBean("charly");
+        System.out.println(charly.getInstrumento().getMarca());
+    }
+    
 }

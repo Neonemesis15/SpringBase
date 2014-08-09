@@ -47,9 +47,11 @@
     </bean>
     
     <!-- Referencia automatica -->
-    <bean id="noel" class="com.tecsup.springagosto.model.Musico" autowire="byName">
-        
+    <bean id="noel" class="com.tecsup.springagosto.model.Musico" autowire="byName"/>
+    <bean id="bajo" class="com.tecsup.springagosto.model.Instrumento" primary="true">
+        <property name="marca" value="Yamaha"/>
     </bean>
-
+    <bean id="cerati" class="com.tecsup.springagosto.model.Musico" autowire="byType"/>
+    <bean id="charly" class="com.tecsup.springagosto.model.Musico" autowire="constructor"/>
 
 </beans>
