@@ -28,5 +28,28 @@
         <property name="numeroCanciones" value="4" />
     </bean>
     
+    <!-- -->
+    <bean id="guitarra" class="com.tecsup.springagosto.model.Guitarra">
+        <property name="marca" value="Gibson"/>
+    </bean>
     
+    <bean id="bateria" class="com.tecsup.springagosto.model.Bateria">
+        <property name="marca" value="Bateria XYZ"/>
+    </bean>
+    
+    <bean id="jimmy" class="com.tecsup.springagosto.model.Musico">
+        <property name="instrumentos">
+            <list>
+                <ref bean="guitarra"/>
+                <ref bean="bateria"/>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- Referencia automatica -->
+    <bean id="noel" class="com.tecsup.springagosto.model.Musico" autowire="byName">
+        
+    </bean>
+
+
 </beans>
