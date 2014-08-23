@@ -8,18 +8,37 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppOrm {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("hibernate_db.xml");
-        AppOrm.doAll(context);
+        //AppOrm.doAll(context);
+        //AppOrm.doInsert(context);
+        AppOrm.doUpdate(context);
     }
-    
-    public static void doAll(ApplicationContext context){
+
+    public static void doUpdate(ApplicationContext context) {
+        ProgramaDAO programaDAO = (ProgramaDAO) context.getBean("programaDAO");
+        Programa programa = new Programa();
+        programa.setCodigo("888");
+        programa.setNombre("Juan");
+        programa.setDescripcion("Hola");
+        programa.setId(4L);
+        programaDAO.update(programa);
+    }
+
+    public static void doInsert(ApplicationContext context) {
+        ProgramaDAO programaDAO = (ProgramaDAO) context.getBean("programaDAO");
+        Programa programa = new Programa();
+        programa.setCodigo("999");
+        programa.setNombre("Pablo");
+        programaDAO.save(programa);
+    }
+
+    public static void doAll(ApplicationContext context) {
         ProgramaDAO programaDAO = (ProgramaDAO) context.getBean("programaDAO");
         List<Programa> programas = programaDAO.all();
-        
-        for(Programa programa:programas){
+
+        for (Programa programa : programas) {
             System.out.println(programa.getNombre());
         }
     }
-    
 }
