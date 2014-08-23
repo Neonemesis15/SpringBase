@@ -5,19 +5,22 @@
 package com.tecsup.springagosto.JDBC.dao;
 
 import com.tecsup.springagosto.JDBC.model.Programa;
+import com.tecsup.springagosto.helper.GenericDAO;
 import java.util.List;
 
 /**
  *
  * @author SABADO-MANHANA
  */
-public interface ProgramaDAO {
+
+public interface ProgramaDAO extends GenericDAO<Programa> {
     List<Programa> all();           // getALL
-    Programa find(long id);         
+           
     void update(Programa programa);
     void save(Programa programa);
-    void delete(Programa programa);
-    Programa find(String nombre);
-    Programa find(String nombre, String codigo, String fecha);
+    void delete(long id);
     
+    Programa find(int id);  
+    Programa find(Long codigo);
+    Programa find(String nombre, String codigo, String fecha);
 }
