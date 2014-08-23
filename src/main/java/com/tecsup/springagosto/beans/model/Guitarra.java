@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tecsup.springagosto.model;
+package com.tecsup.springagosto.beans.model;
 
 /**
  *

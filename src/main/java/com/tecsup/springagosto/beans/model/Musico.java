@@ -1,4 +1,4 @@
-package com.tecsup.springagosto.model;
+package com.tecsup.springagosto.beans.model;
 
 import java.util.List;
 

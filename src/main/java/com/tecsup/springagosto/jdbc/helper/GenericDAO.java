@@ -1,5 +1,5 @@
 
-package com.tecsup.springagosto.helper;
+package com.tecsup.springagosto.jdbc.helper;
 
 import java.util.List;
 

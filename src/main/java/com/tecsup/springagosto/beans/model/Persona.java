@@ -1,5 +1,5 @@
 
-package com.tecsup.springagosto.model;
+package com.tecsup.springagosto.beans.model;
 
 public class Persona {
     private String nombres;

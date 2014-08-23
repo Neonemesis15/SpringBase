@@ -4,8 +4,8 @@
  */
 package com.tecsup.springagosto.beans;
 
-import com.tecsup.springagosto.model.Instrumento;
-import com.tecsup.springagosto.model.Musico;
+import com.tecsup.springagosto.beans.model.Instrumento;
+import com.tecsup.springagosto.beans.model.Musico;
 import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

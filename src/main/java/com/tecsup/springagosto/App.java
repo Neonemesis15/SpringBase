@@ -1,6 +1,6 @@
 package com.tecsup.springagosto;
 
-import com.tecsup.springagosto.model.Persona;
+import com.tecsup.springagosto.beans.model.Persona;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
