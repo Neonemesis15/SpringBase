@@ -12,16 +12,22 @@ public class AppOrm {
         ApplicationContext context = new ClassPathXmlApplicationContext("hibernate_db.xml");
         //AppOrm.doAll(context);
         //AppOrm.doInsert(context);
-        AppOrm.doUpdate(context);
+        AppOrm.doDelete(context);
     }
-
+    
+    public static void doDelete(ApplicationContext context) {
+        ProgramaDAO programaDAO = (ProgramaDAO) context.getBean("programaDAO");
+        Programa programa = programaDAO.find(3L);
+        programaDAO.delete(programa);
+    }
+    
     public static void doUpdate(ApplicationContext context) {
         ProgramaDAO programaDAO = (ProgramaDAO) context.getBean("programaDAO");
         Programa programa = new Programa();
         programa.setCodigo("888");
         programa.setNombre("Juan");
         programa.setDescripcion("Hola");
-        programa.setId(4L);
+        programa.setId(3L);
         programaDAO.update(programa);
     }
 

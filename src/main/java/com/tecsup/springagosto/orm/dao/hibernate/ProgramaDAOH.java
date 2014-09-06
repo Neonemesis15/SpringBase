@@ -8,8 +8,10 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository("programaDAO")
+@Transactional
 public class ProgramaDAOH extends BaseHibernateDAO implements ProgramaDAO{
 
     public List<Programa> all() {

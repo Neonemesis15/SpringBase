@@ -4,11 +4,11 @@
  */
 package com.tecsup.springagosto.jdbc.dao;
 
-import com.tecsup.springagosto.jdbc.model.Programa;
+
 import java.util.List;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
-
+import com.tecsup.springagosto.jdbc.model.Programa;
 /**
  *
  * @author SABADO-MANHANA
