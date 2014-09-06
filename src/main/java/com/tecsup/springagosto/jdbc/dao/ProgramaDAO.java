@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tecsup.springagosto.jdbc.dao;
+package com.tecsup.springagosto.JDBC.dao;
 
-import com.tecsup.springagosto.jdbc.model.Programa;
-import com.tecsup.springagosto.jdbc.helper.GenericDAO;
+import com.tecsup.springagosto.JDBC.model.Programa;
+import com.tecsup.springagosto.helper.GenericDAO;
 import java.util.List;
 
 /**
